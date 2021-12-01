@@ -12,8 +12,8 @@ content-type: eg
   {%- assign conc = tag | first -%}
   {%- if conc != 'Favorite' -%}
     <h2 id="{{ conc }}">{{ conc }}</h2>
-    {% for page in tag.last %} 
-      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{page.url}}">{{ page.title }}</a></li>
+    {% for note in tag.last %} 
+      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{note.url}}">{{ note.title }}</a></li>
     {% endfor %}
   {%- endif -%}
 {% endfor %}
