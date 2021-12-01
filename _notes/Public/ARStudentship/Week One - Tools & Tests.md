@@ -20,7 +20,7 @@ So now we need a 3D model. I looked at a few options for modelling software but 
 
 This gave me a rough, but scale, model of the clocktower building. When modelling, I also marked the location of the sign on the map. This was so when I imported the model into lens studio I could immediately place the building at roughly the correct distance from the marker. Although my GPS location of the sign was not quite correct, so I had to move the model manually with a preview image to align it correctly with the real building. But just a little.
 
-![[/assets/img/studentship/F360LensPreview.png]]
+![](/assets/img/studentship/F360LensPreview.png)
 
 At this point, I had a lens that could turn the clocktower building into a grey box. This was good progress but the issue now became how to get a historical photograph onto a 3D model of a building.   
 
@@ -30,13 +30,13 @@ But assuming we could exactly line up the photo (back to this later), how do we 
 
 After spending a fair amount of time looking at how to do this virtually I ended up at [Blender](https://www.blender.org/). This is a popular software used for 3D modelling, animation, and art, alongside I'm sure many other uses. But the key point is that I could use it to create a virtual "projector". Specifically, I could set up a spotlight in the scene that used an image for its emission. And then the Blender software can map the light onto our 3D model of the building. Concisely this is called projective texture mapping.
 
-![[/assets/img/studentship/F360BlenderProjection.png]]
+![](/assets/img/studentship/F360BlenderProjection.png)
 
 Now we're caught up to current tinkering. The problems I am working on now are; how to align the projector perfectly, and how to turn the mapped texture into a static texture.
 
 As far as lining the projector up, I am currently testing out [fSpy](https://fspy.io/). This is a piece of software that can be used in conjunction with Blender. Its exact purpose is to locate the position of a camera in 3D space, based on a single photograph. This is done manually by lining up the 3D axis on the axis visible in the photograph. And it can then export this to Blender where it will create a camera relative to the origin point you specify. So this looks like it will be the tool used in the long run.
 
-![[/assets/img/studentship/fSpyExample.png]]
+![](/assets/img/studentship/fSpyExample.png)
 
 The final issue to be mentioned here is turning the mapped texture into a static texture, or not at all. My original plan was to have the 3D model in lens studio with pre-applied textures on the surfaces. This would keep it lightweight in terms of processing. This meant I needed to somehow "capture" the mapped texture and then apply it directly to the model's surface. One way I could possibly do this is to take orthographic renderings of the model in Blender, and then use these as 2D textures. Which I think of as turning the photograph into pseudo-orthographic views of the building.
 
