@@ -9,6 +9,7 @@ content-type: eg
 <br>
 <div>
 {% for tag in site.tags %}
+  <li>{{tag}}</li>
   {%- assign conc = tag | first -%}
   {%- if conc != 'Favorite' -%}
     <h2 id="{{ conc }}">{{ conc }}</h2>
