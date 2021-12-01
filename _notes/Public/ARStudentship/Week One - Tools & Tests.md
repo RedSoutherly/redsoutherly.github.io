@@ -10,13 +10,13 @@ Currently, the plan is to use Snapchat's [Lens Studio](https://lensstudio.snapch
 
 Once I had familiarised myself with the software I needed to apply it in the real world. I have chosen to focus on the university's clocktower for this since we have many photographs and it is very prominent. Then I needed to find a suitable marker, which was rather easy given there was a sign with a view of the building directly behind it (all be it with trees in the way). The sign is not entirely unique across campus but is the only one with the relevant positioning.
 
-![[/assets/img/studentship/ClocktowerMarker.jpg]] 
+![](/assets/img/studentship/ClocktowerMarker.jpg)
 
 The next task was to figure out how exactly to align a historical photograph with its real counterpart live. Originally we were just going to try to line up the picture as a 2D plane, so from an exact position by the sign, it would overlay on the building. This felt a bit too "clunky", it wouldn't look very nice in the 3D space, and if the user moved from the position it wouldn't line up anymore. So the new idea is to place a 3D model of the building relative to the marker so that it sat "on top of" the real one. Since we could place this at the correct relative distance from the marker, the user moving around wouldn't cause a parallax between the real building and its model. Then we can "texture" the 3D model with the photograph, allowing the user to move without losing alignment of features.
 
 So now we need a 3D model. I looked at a few options for modelling software but settled on [Fusion360](https://www.autodesk.co.nz/products/fusion-360/overview) by Autodesk, who thankfully offers a free personal license. Using [OpenStreetMap](https://www.openstreetmap.org/) I could find a rough floor plan of the clocktower to sketch, and then extrude up into the general shape of the building.
 
-![[/assets/img/studentship/F360Clocktower.png]]
+![](/assets/img/studentship/F360Clocktower.png)
 
 This gave me a rough, but scale, model of the clocktower building. When modelling, I also marked the location of the sign on the map. This was so when I imported the model into lens studio I could immediately place the building at roughly the correct distance from the marker. Although my GPS location of the sign was not quite correct, so I had to move the model manually with a preview image to align it correctly with the real building. But just a little.
 
