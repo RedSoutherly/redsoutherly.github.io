@@ -31,6 +31,22 @@
 
 
 <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+{%- if page.content-type == "post" -%}
+<ul class="tags">
+    {%- if page.status != nil and page.status != empty -%}
+    <li><a href="javascript:void(0)" class="tag"><b>Status:</b> <i>{{page.status | capitalize}}</i></a></li>
+    {%- endif -%}
+    <li><a href="/dates/#{{ page.date | date: '%d-%B-%Y' }}" class="tag">{{ page.date | date: '%B-%d-%Y' }}</a></li>
+    <!-- Loop through page categories and print them in tags -->
+    {%- for tag in page.tags -%}
+        {%- if tag == 'Favorite' -%}
+        <li><a href="/favorites/" class="tag">{{ tag }}</a></li>
+        {%- else -%}
+        <li><a href="/tags/#{{ tag }}" class="tag">{{ tag }}</a></li>
+        {%- endif -%}
+    {%- endfor -%}
+</ul>
+{%- endif -%}
 <div class="content">
     {%- if site.preferences.wiki_style_link.enabled -%}
         {%- assign content_array = content | split:'[[' -%}
