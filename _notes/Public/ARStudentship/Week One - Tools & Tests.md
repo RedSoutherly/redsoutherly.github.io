@@ -2,6 +2,7 @@
 title : Week One - Tools & Tests
 notetype : feed
 date : 25-11-2021
+tags : Summer
 ---
 
 My first week in the lab involved familiarising myself with the tools we plan on using and also finding new ones. While starting to tackle the fundamental "how?"s of the project.
