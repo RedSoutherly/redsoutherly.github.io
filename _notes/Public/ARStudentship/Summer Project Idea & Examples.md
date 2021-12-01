@@ -8,9 +8,12 @@ The abstract for this project proposed a more immersive way of exploring histori
 
 The two videos below show a demonstration of the concept. Where the user can look around in their space and view the historic image. The key point is how we will align the image with the real-world subject. In these examples, the image is aligned on a 3D video where each frame can be corrected in advance. But this will become more difficult when we try to make this a live experience using AR.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AEOozhi7dkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UesTBd7c_dM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="position:relative;padding-top:56.25%;"> 
+	<iframe src="https://www.youtube.com/embed/AEOozhi7dkA" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> 
+</div>
+<div style="position:relative;padding-top:56.25%;"> 
+	<iframe src="https://www.youtube.com/embed/UesTBd7c_dM" frameborder="0" allowfullscreen style="position:absolute;top:0;right:0;width:100%;height:100%;"></iframe> 
+</div>
 
 You may also note that the user stays in a stationary position for this demonstration. This is another obstacle we must figure out. Since we want the user to be able to move around the environment while keeping the subject static and aligned with the real world.
 
