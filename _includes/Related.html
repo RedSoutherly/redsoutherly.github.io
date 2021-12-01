@@ -34,6 +34,7 @@
   {%- assign sameTagCount = 0 -%}
   {%- assign minCommonTags =  1 -%}
   {%- for note in site.notes -%}
+  {%- dump(site.notes) -%}
     {%- for tag in note.tags -%}
       {%- if note.url != page.url -%}
         {%- if page.tags contains tag -%}
