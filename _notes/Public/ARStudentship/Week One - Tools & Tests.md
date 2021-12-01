@@ -16,7 +16,7 @@ The next task was to figure out how exactly to align a historical photograph wit
 
 So now we need a 3D model. I looked at a few options for modelling software but settled on [Fusion360](https://www.autodesk.co.nz/products/fusion-360/overview) by Autodesk, who thankfully offers a free personal license. Using [OpenStreetMap](https://www.openstreetmap.org/) I could find a rough floor plan of the clocktower to sketch, and then extrude up into the general shape of the building.
 
-![](/assets/img/studentship/F360Clocktower.png)
+![](/assets/img/studentship/F360ClockTower.png)
 
 This gave me a rough, but scale, model of the clocktower building. When modelling, I also marked the location of the sign on the map. This was so when I imported the model into lens studio I could immediately place the building at roughly the correct distance from the marker. Although my GPS location of the sign was not quite correct, so I had to move the model manually with a preview image to align it correctly with the real building. But just a little.
 
