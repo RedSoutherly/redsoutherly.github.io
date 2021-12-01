@@ -33,11 +33,11 @@
 {%- if page.content-type == "notes" -%}
   {%- assign sameTagCount = 0 -%}
   {%- assign minCommonTags =  1 -%}
-  {%- for notes in site.notes -%}
-    {%- for tag in notes.tags -%}
-      {%- if notes.url != page.url -%}
+  {%- for note_items in site.notes -%}
+    {%- for tag in note_items.tags -%}
+      {%- if note_items.url != page.url -%}
         {%- if page.tags contains tag -%}
-          {%- unless notes.content contains page.title -%}
+          {%- unless note_items.content contains page.title -%}
             {%- assign sameTagCount = sameTagCount | plus: 1 -%}
           {%- endunless -%}
         {%- endif -%}
@@ -56,13 +56,13 @@
       {%- assign maxRelated = 8 -%}
       {%- assign minCommonTags =  1 -%}
       {%- assign maxRelatedCounter = 0 -%}
-      {%- for notes in site.notes -%}
+      {%- for note_items in site.notes -%}
           {%- assign sameTagCount = 0 -%}
           {%- assign commonTags = '' -%}
-          {%- for tag in notes.tags -%}
-            {%- if notes.url != page.url -%}
+          {%- for tag in note_items.tags -%}
+            {%- if note_items.url != page.url -%}
               {%- if page.tags contains tag -%}
-                {%- unless notes.content contains page.title -%}
+                {%- unless note_items.content contains page.title -%}
                   {%- assign sameTagCount = sameTagCount | plus: 1 -%}
                   {%- capture tagmarkup -%} <span class="label label-default">{{ tag }}</span> {%- endcapture -%}
                   {%- assign commonTags = commonTags | append: tagmarkup -%}
