@@ -19,12 +19,12 @@ content-type: eg
 
 <main>
     {% assign postsByDay = 
-    site.notes | group_by_exp:"post", "post.date | date: '%d-%B-%Y'" %}
+    site.notes | group_by_exp:"page", "page.date | date: '%d-%B-%Y'" %}
     
     {% for day in postsByDay %}
       <h3 id="{{ day.name }}">{{ day.name }}</h3>
-          {% for post in day.items %}
-            <li id="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% for page in day.items %}
+            <li id="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ page.url }}">{{ page.title }}</a></li>
           {% endfor %}
     {% endfor %}
     
