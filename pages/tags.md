@@ -15,7 +15,7 @@ content-type: eg
 
   {% for note in notes %}
     {% if note.tags contains tag %}
-      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{note.url}}">{{ note.title }}</a><small>{{ note.date | date: '%d %B %Y' }}</small></li>
+      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{note.url}}">{{ note.title }}</a><small>&nbsp;&nbsp;&nbsp;&nbsp;{{ note.date | date: '%d %B %Y' }}</small></li>
     {% endif %}
   {% endfor %}
 {% endfor %}
