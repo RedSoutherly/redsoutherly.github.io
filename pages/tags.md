@@ -8,12 +8,13 @@ content-type: eg
 
 <br>
 <div>
-{% for tag in site.tags %}
+{% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% for tag in tags %}
   {%- assign conc = tag | first -%}
   {%- if conc != 'Favorite' -%}
     <h2 id="{{ conc }}">{{ conc }}</h2>
-    {% for post in tag.last %} 
-      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{post.url}}">{{ post.title }}</a></li>
+    {% for page in tag.last %} 
+      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{page.url}}">{{ page.title }}</a></li>
     {% endfor %}
   {%- endif -%}
 {% endfor %}
