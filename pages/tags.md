@@ -8,7 +8,7 @@ content-type: eg
 
 <br>
 <div>
-{% set pages = site.notes | merge(site.posts) %}
+{% assign pages = site.notes | merge(site.posts) %}
 {% assign tags =  pages | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in tags %}
   {%- assign conc = tag | first -%}
