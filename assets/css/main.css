@@ -3903,11 +3903,10 @@ a.navbar-item,
   padding-right: 1em; }
 
 a.tag {
-  border: 1px solid transparent;
+  border: 1px solid var(--text-main);
   transition: all 0.2s; }
 
 a.tag:hover {
-  border: 1px solid var(--border);
   text-decoration: none;
   color: var(--link); }
 
