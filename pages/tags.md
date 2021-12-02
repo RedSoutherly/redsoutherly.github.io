@@ -21,7 +21,7 @@ content-type: eg
 {% for tag in tags %}
   <h2 id="{{ tag }}">{{ tag }}</h2>
   {% for note in site.notes %}
-  <h3>note.tags</h3>
+    <h3>{{ note.tags }}</h3>
     <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{note.url}}">{{ note.title }}</a></li>
   {% endfor %}
 {% endfor %}
