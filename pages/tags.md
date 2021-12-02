@@ -11,7 +11,7 @@ content-type: eg
 {% for tag in tags %}
   <h2 id="{{ tag }}">{{ tag }}</h2>
 
-  {% assign notes = site.notes | sort: "date" %}
+  {% assign notes = site.notes | sort: "date" | reverse %}
 
   {% for note in notes %}
     {% if note.tags contains tag %}
