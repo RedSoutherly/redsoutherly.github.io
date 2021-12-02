@@ -7,6 +7,7 @@ content-type: eg
 
 
 <br>
+<!-- Display Tags from Posts
 <div>
 {% for tag in site.tags %}
   {%- assign conc = tag | first -%}
@@ -16,6 +17,7 @@ content-type: eg
     {% endfor %}
 {% endfor %}
 </div>
+-->
 <div>
 {% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in tags %}
