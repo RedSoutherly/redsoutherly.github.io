@@ -40,7 +40,7 @@
 <script src="/assets/js/Search.js"></script>
 {%- endif -%}
 <!-- feed with filter-->
-{% assign note_items = site.notes | sort: "date" | reverse %}
+{% assign note_items = site.posts | sort: "date" | reverse %}
 {% for note_items in note_items %}
 {%- if note_items.notetype == "feed" -%}
 <div class="block note-cards">
