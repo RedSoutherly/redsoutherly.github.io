@@ -16,7 +16,7 @@ content-type: eg
     color: #4183c4;
 }
 </style>
-
+<br>
 <main>
     {% assign postsByDay = 
     site.notes | group_by_exp:"page", "page.date | date: '%d-%B-%Y'" %}
