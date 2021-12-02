@@ -9,12 +9,11 @@ content-type: eg
 <br>
 <div>
 {% for tag in site.tags %}
-  <li>{{tag}}</li>
   {%- assign conc = tag | first -%}
   {%- if conc != 'Favorite' -%}
     <h2 id="{{ conc }}">{{ conc }}</h2>
-    {% for page in tag.last %} 
-      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{page.url}}">{{ page.title }}</a></li>
+    {% for post in tag.last %} 
+      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{post.url}}">{{ post.title }}</a></li>
     {% endfor %}
   {%- endif -%}
 {% endfor %}
