@@ -2,7 +2,7 @@
 title : Summer Project Idea & Examples
 notetype : feed
 date : 24-11-2021
-tags : Studentship
+tags : [Summer Research Project]
 ---
 
 The abstract for this project proposed a more immersive way of exploring historic photographs, including being able to see them in the location of their origin. The general idea is to use the tools of augmented reality (AR) to put the user in the place of the camera from many years ago. So when they look at a building we can overlay precisely placed historic photographs to give the sense that you are looking back in time at how it once stood.
