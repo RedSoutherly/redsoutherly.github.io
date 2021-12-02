@@ -20,8 +20,8 @@ content-type: eg
 {% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in tags %}
   <h2 id="{{ tag }}">{{ tag }}</h2>
-  {% for page in tag.last %} 
-    <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{page.url}}">{{ page.title }}</a></li>
+  {% for note in site.notes %} 
+    <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{note.url}}">{{ note.title }}</a></li>
   {% endfor %}
 {% endfor %}
 </div>
