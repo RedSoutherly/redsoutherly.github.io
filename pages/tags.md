@@ -17,7 +17,8 @@ content-type: eg
     {% endfor %}
   {%- endif -%}
 {% endfor %}
-
+</div>
+<div>
 {% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in tags %}
   {%- assign conc = tag | first -%}
