@@ -8,17 +8,23 @@ content-type: eg
 
 <br>
 <div>
-{% assign notetags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
-{% assign tags = notetags | merge(site.tags)%}
-{% for tag in tags %}
+{% for tag in site.tags %}
   {%- assign conc = tag | first -%}
   {%- if conc != 'Favorite' -%}
     <h2 id="{{ conc }}">{{ conc }}</h2>
     {% for post in tag.last %} 
       <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{post.url}}">{{ post.title }}</a></li>
     {% endfor %}
-    {% for notes in tag.last %} 
-      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{notes.url}}">{{ notes.title }}</a></li>
+  {%- endif -%}
+{% endfor %}
+
+{% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% for tag in tags %}
+  {%- assign conc = tag | first -%}
+  {%- if conc != 'Favorite' -%}
+    <h2 id="{{ conc }}">{{ conc }}</h2>
+    {% for page in tag.last %} 
+      <li id="category-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{page.url}}">{{ page.title }}</a></li>
     {% endfor %}
   {%- endif -%}
 {% endfor %}
