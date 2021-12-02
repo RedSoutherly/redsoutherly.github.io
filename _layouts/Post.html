@@ -144,8 +144,12 @@
             <!-- About Page -->
 
             {%- if page.permalink == "/about" -%}
-                {%- include About.html -%}
-                {%- include Footer.html -%}  
+                <div class="column is-half">
+                    <main>
+                        {%- include About.html -%}
+                        {%- include Footer.html -%} 
+                    </main>     
+                </div>
             {%- endif -%}
 
         </div>
