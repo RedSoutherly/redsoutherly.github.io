@@ -141,6 +141,12 @@
                 <script>window.location.href="../"</script>
             {%- endif -%}
 
+            <!-- About Page -->
+
+            {%- if page.permalink == "/about" -%}
+                {%- include About.html -%}
+            {%- endif -%}
+
         </div>
     </section>     
 </body>
