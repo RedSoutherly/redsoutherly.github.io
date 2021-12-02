@@ -8,8 +8,8 @@ content-type: eg
 
 <br>
 <div>
-{% assign pages = site.notes | merge(site.posts) %}
-{% assign tags =  pages | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% assign notetags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% assign tags = notetags | merge(site.tags)%}
 {% for tag in tags %}
   {%- assign conc = tag | first -%}
   {%- if conc != 'Favorite' -%}
