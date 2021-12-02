@@ -39,11 +39,7 @@ or page.content-type == "post"-%}
     {%- endif -%}
     <!-- Loop through page categories and print them in tags -->
     {%- for tag in page.tags -%}
-        {%- if tag == 'Favorite' -%}
-        <li><a href="/favorites/" class="tag">{{ tag }}</a></li>
-        {%- else -%}
         <li><a href="/tags/#{{ tag }}" class="tag">{{ tag }}</a></li>
-        {%- endif -%}
     {%- endfor -%}
 </ul>
 {%- endif -%}
