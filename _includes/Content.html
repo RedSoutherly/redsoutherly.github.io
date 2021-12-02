@@ -37,7 +37,6 @@ or page.content-type == "post"-%}
     {%- if page.status != nil and page.status != empty -%}
     <li><a href="javascript:void(0)" class="tag"><b>Status:</b> <i>{{page.status | capitalize}}</i></a></li>
     {%- endif -%}
-    <li><a href="/dates/#{{ page.date | date: '%d-%B-%Y' }}" class="tag">{{ page.date | date: '%B-%d-%Y' }}</a></li>
     <!-- Loop through page categories and print them in tags -->
     {%- for tag in page.tags -%}
         {%- if tag == 'Favorite' -%}
