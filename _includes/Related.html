@@ -30,7 +30,8 @@
 *
 {%- endcomment -%}
 
-<!-- Tag Posts
+{%- comment -%}
+Remove comment to enable post tagging
 {%- if page.content-type == "post" -%}
   {%- assign sameTagCount = 0 -%}
   {%- assign minCommonTags =  1 -%}
@@ -87,7 +88,7 @@
     </div>
   {%- endif -%}
 {%- endif -%}
-  -->
+{%- endcomment -%}
 
 {%- if page.content-type == "notes" -%}
   {%- assign sameTagCount = 0 -%}

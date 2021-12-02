@@ -7,7 +7,8 @@ content-type: eg
 
 
 <br>
-<!-- Display Tags from Posts
+{%- comment -%}
+Remove comment to enable post tags
 <div>
 {% for tag in site.tags %}
   {%- assign conc = tag | first -%}
@@ -17,7 +18,7 @@ content-type: eg
     {% endfor %}
 {% endfor %}
 </div>
--->
+{%- endcomment -%}
 <div>
 {% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in tags %}
