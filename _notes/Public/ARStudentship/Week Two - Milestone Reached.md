@@ -30,6 +30,7 @@ Now that I had a textured model, I could import it into Lens Studio. [[Note that
 Extended tracking on the other hand uses more than just the marker in its view of the world. Once the marker is detected the first time, all the objects are placed relative to it. Once the objects are placed, the marker no longer matters. Instead the lens will use whatever data it can access, camera, LiDAR, etc, and track the entire space. This gives the lens many more points of reference to calculate the position and movement of the device in space, meaning the alignment is more accurate. And we found that this greatly increased the stability of the objects.
 
 ### Test
+
 Hello | Bye
 - | -
 1 | 2 
