@@ -33,7 +33,7 @@ Extended tracking on the other hand uses more than just the marker in its view o
 
 Demo without extended tracking | Demo with extended tracking
 ---|---
-![](/assets/img/studentship/nonextendeddemo.mp4) | ![](/assets/img/studentship/extendeddemo.mp4)
+<video muted controls><source src="https://redsoutherly.github.io/assets/img/studentship/nonextendeddemo.mp4" type="video/mp4"></video> | <video muted controls><source src="https://redsoutherly.github.io/assets/img/studentship/extendeddemo.mp4" type="video/mp4"></video>
 
 Above you can see the two demos running on a mobile phone, and the significant advantage that extended tracking provides. But we also got the demo to work on the AR glasses, see below.
 
@@ -41,7 +41,7 @@ Above you can see the two demos running on a mobile phone, and the significant a
 
 Demo without extended tracking | Demo with extended tracking
 ---|---
-![](/assets/img/studentship/nonextendeddemo-spec.mp4) | ![](/assets/img/studentship/extendeddemo-spec.mp4)
+<video muted controls><source src="https://redsoutherly.github.io/assets/img/studentship/nonextendeddemo-spec.MP4" type="video/mp4"></video> | <video muted controls><source src="https://redsoutherly.github.io/assets/img/studentship/extendeddemo-spec.MP4" type="video/mp4"></video>
 
 The instability when not using extended tracking is even more apparent in the demo from the spectacles. Where moving parallel to the marker sent the object completely off screen. So going forward use of extended tracking is going to be a given.
 
