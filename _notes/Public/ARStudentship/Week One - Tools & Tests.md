@@ -13,23 +13,25 @@ Once I had familiarised myself with the software I needed to apply it in the rea
 
 ![](/assets/img/studentship/ClocktowerMarker.jpg)
 
+### Modeling 
 The next task was to figure out how exactly to align a historical photograph with its real counterpart live. Originally we were just going to try to line up the picture as a 2D plane, so from an exact position by the sign, it would overlay on the building. This felt a bit too "clunky", it wouldn't look very nice in the 3D space, and if the user moved from the position it wouldn't line up anymore. So the new idea is to place a 3D model of the building relative to the marker so that it sat "on top of" the real one. Since we could place this at the correct relative distance from the marker, the user moving around wouldn't cause a parallax between the real building and its model. Then we can "texture" the 3D model with the photograph, allowing the user to move without losing alignment of features.
 
-So now we need a 3D model. I looked at a few options for modelling software but settled on [Fusion360](https://www.autodesk.co.nz/products/fusion-360/overview) by Autodesk, who thankfully offers a free personal license. Using [OpenStreetMap](https://www.openstreetmap.org/) I could find a rough floor plan of the clocktower to sketch, and then extrude up into the general shape of the building.
+So now we need a 3D model. I looked at a few options for modeling software but settled on [Fusion360](https://www.autodesk.co.nz/products/fusion-360/overview) by Autodesk, who thankfully offers a free personal license. Using [OpenStreetMap](https://www.openstreetmap.org/) I could find a rough floor plan of the clocktower to sketch, and then extrude up into the general shape of the building.
 
 ![](/assets/img/studentship/F360ClockTower.png)
 
-This gave me a rough, but scale, model of the clocktower building. When modelling, I also marked the location of the sign on the map. This was so when I imported the model into lens studio I could immediately place the building at roughly the correct distance from the marker. Although my GPS location of the sign was not quite correct, so I had to move the model manually with a preview image to align it correctly with the real building. But just a little.
+This gave me a rough, but scale, model of the clocktower building. When modeling, I also marked the location of the sign on the map. This was so when I imported the model into lens studio I could immediately place the building at roughly the correct distance from the marker. Although my GPS location of the sign was not quite correct, so I had to move the model manually with a preview image to align it correctly with the real building. But just a little.
 
 ![](/assets/img/studentship/F360LensPreview.png)
 
+### Texturing
 At this point, I had a lens that could turn the clocktower building into a grey box. This was good progress but the issue now became how to get a historical photograph onto a 3D model of a building.   
 
 The photos we have are not orthographic, which they likely never will be. So we can't just apply them as textures to the surfaces of the model, since the perspective of the photo will not line up. Perspective is the limiting factor, we can only align the features of the building with the model if we do so from the exact perspective of the camera from many years ago. This also means only the surfaces of the model that are visible in the photo can be textured, but that is a problem that is simply not solvable in this instance.   
 
 But assuming we could exactly line up the photo (back to this later), how do we then place the textures on the surfaces of the model. Well, the photo was taken from a camera lens seeing light from a specific perspective; so how about we reverse this process? Instead, we can project the photo onto the model from a given perspective position.   
 
-After spending a fair amount of time looking at how to do this virtually I ended up at [Blender](https://www.blender.org/). This is a popular software used for 3D modelling, animation, and art, alongside I'm sure many other uses. But the key point is that I could use it to create a virtual "projector". Specifically, I could set up a spotlight in the scene that used an image for its emission. And then the Blender software can map the light onto our 3D model of the building. Concisely this is called projective texture mapping.
+After spending a fair amount of time looking at how to do this virtually I ended up at [Blender](https://www.blender.org/). This is a popular software used for 3D modeling, animation, and art, alongside I'm sure many other uses. But the key point is that I could use it to create a virtual "projector". Specifically, I could set up a spotlight in the scene that used an image for its emission. And then the Blender software can map the light onto our 3D model of the building. Concisely this is called projective texture mapping.
 
 ![](/assets/img/studentship/F360BlenderProjection.png)
 
