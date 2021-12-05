@@ -5,7 +5,7 @@ date : 06-12-2021
 tags : [Summer Research Project]
 ---
 
-I wanted to originally call this post "trials & tribulations" for the nice alliteration with [[Week One - Tools & Tests | last weeks]] update. But it was a more successful week than that title would suggest. Which I suppose is a good thing.
+I wanted to originally call this post "trials & tribulations" for the nice alliteration with last week's update. But it was a more successful week than that title would suggest. Which I suppose is a good thing.
 What I'll get to at the end of this update is that I have made a rough working demo of the projects idea, and that it works quite well in practice. But to be consistent I will first cover how I got there.
 
 The first thing I needed to do was conclude whether or not I could achieve projective texture mapping within Lens Studio. Long story short i could not find anything that allowed this technique. There were two avenues that looked closest to our solution but were ultimately not suitable. [Landmark Tracking](https://lensstudio.snapchat.com/templates/landmarker/guide/) can be used to identify and apply effects to a landmark structure. But this is only available for provided landmarks with no way to specify a custom one. And there were some mentions of "projecting" a texture onto a [face mesh](https://lensstudio.snapchat.com/guides/face/face-effects/face-mesh/), but this is then limited to it being on a face mesh.
@@ -31,14 +31,14 @@ Extended tracking on the other hand uses more than just the marker in its view o
 
 #### Mobile Demos
 Demo without extended tracking | Demo with extended tracking
--|-
+---|---
 ![](/assets/img/studentship/nonextendeddemo.mp4) | ![](/assets/img/studentship/extendeddemo.mp4)
 
 Above you can see the two demos running on a mobile phone, and the significant advantage that extended tracking provides. But we also got the demo to work on the AR glasses, see below.
 
 #### Spectacle Demos
 Demo without extended tracking | Demo with extended tracking
--|-
+---|---
 ![](/assets/img/studentship/nonextendeddemo-spec.mp4) | ![](/assets/img/studentship/extendeddemo-spec.mp4)
 
 The instability when not using extended tracking is even more apparent in the demo from the spectacles. Where moving parallel to the marker sent the object completely off screen. So going forward use of extended tracking is going to be a given.
