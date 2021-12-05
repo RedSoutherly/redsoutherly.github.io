@@ -29,33 +29,8 @@ Seen above, the first attempt at baking a photograph as a texture for this proje
 Now that I had a textured model, I could import it into Lens Studio. [[Note that it needs to export from Blender with PBR textures for this to work.::rmn]] Once in Lens Studio I just had to align it to the previous model and then I could set about creating a collection of test cases. We were testing for object stability with different camera ranges, markers, with and without extended tracking. We found that in real use the ranges and markers didn't make much noticeable difference, but extended tracking did. Normally a marker tracking lens will base all of its alignment information off of just the perceived marker. This means that you are limiting the world data you have to just the marker, and whether or not you can see it at all. We found that using this method the objects in the scene were very unstable, especially distant objects like our building model.
 Extended tracking on the other hand uses more than just the marker in its view of the world. Once the marker is detected the first time, all the objects are placed relative to it. Once the objects are placed, the marker no longer matters. Instead the lens will use whatever data it can access, camera, LiDAR, etc, and track the entire space. This gives the lens many more points of reference to calculate the position and movement of the device in space, meaning the alignment is more accurate. And we found that this greatly increased the stability of the objects.
 
-### Test
-
-Hello | Bye
-- | -
-1 | 2 
-
-Hello | Bye
---- | ---
-1 | 2 
-
-Hello | Bye
-- | -
-![](/assets/img/studentship/bakeoverlay.png) | 2 
-
-Hello | Bye
---- | ---
-![](/assets/img/studentship/bakeoverlay.png) | 2 
-
-Hello | Bye
-- | -
-![](/assets/img/studentship/bakeoverlay.png) | ![](/assets/img/studentship/bakeoverlay.png) 
-
-Hello | Bye
---- | ---
-![](/assets/img/studentship/bakeoverlay.png) | ![](/assets/img/studentship/bakeoverlay.png) 
-
 #### Mobile Demos
+
 Demo without extended tracking | Demo with extended tracking
 ---|---
 ![](/assets/img/studentship/nonextendeddemo.mp4) | ![](/assets/img/studentship/extendeddemo.mp4)
@@ -63,6 +38,7 @@ Demo without extended tracking | Demo with extended tracking
 Above you can see the two demos running on a mobile phone, and the significant advantage that extended tracking provides. But we also got the demo to work on the AR glasses, see below.
 
 #### Spectacle Demos
+
 Demo without extended tracking | Demo with extended tracking
 ---|---
 ![](/assets/img/studentship/nonextendeddemo-spec.mp4) | ![](/assets/img/studentship/extendeddemo-spec.mp4)
