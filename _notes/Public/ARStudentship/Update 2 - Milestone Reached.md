@@ -1,5 +1,5 @@
 ---
-title : Update Two - Milestone Reached
+title : Update 2 - Milestone Reached
 notetype : feed
 date : 06-12-2021
 tags : [Summer Research Project]
