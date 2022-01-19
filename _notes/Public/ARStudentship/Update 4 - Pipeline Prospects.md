@@ -54,5 +54,8 @@ Gaussian | No Gaussian
 :---: | :---:
 ![](/assets/img/studentship/mask_blur.jpg) | ![](/assets/img/studentship/mask.jpg)  
 
+Once I had the masks, there were a couple avenues to explore.
+OpenCV has a couple built-in inpainting algorithms, which is convenient because OpenCV is already being used for loading images into detectron. So that was clearly the first option to look into, however the results weren't that good. The algorithms that OpenCV provided work by replicating the pixels from around the edge of the mask and "stretching" them over the void in the mask. This may work for small voids in the mask or thin lines, but for large sections of image it looks more like a smudge.
 
+![](/assets/img/studentship/cv2_inpaint.jpg)
 
