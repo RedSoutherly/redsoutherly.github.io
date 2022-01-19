@@ -35,12 +35,24 @@ The general process would be like this for each image inputted:
 - The image is then folded along these lines into a 3D "popup".
 - The parallel lines on the model are used for a vanishing point calculation that identifies the location and perspective of the camera, and a marker is placed.
 
-Currently I am up to implementing the inpainting portion of the pipeline. I will outline my process up to that point now.
+Stepping back a bit. Our current methodology for the project is to produce more of  concept than a final product, due to the time limitations. So reaching "good enough" at a stage will prompt the move to the next one for now.
+
+With that in mind, I am now up to implementing the inpainting portion of the pipeline. I will outline my process up to that point now.
 
 #### Occlusion
-This is the dataset that I am currently working forwards from. With this dataset I have a single class, occluder. The aim is that if I can identify all the objects in an image that are occluding the view, or are extraneous, then I could handle the inpainting first. This would then give me a "cleaner" image to further process; ideally containing just the building, ground, and sky. Since I have just one class I worried it was going to be too generalised for the CNN to handle. But I have been happily surprised by how well, in still very early stages, it can pick out objects in a scene that are not part of the building.
+The first process that I needed to implement was identifying and masking the "occluding" objects in an image. So I got my set of training images and started drawing polygons around everything from trees to dogs. It feels like training with a negative assertion but I want to identify anything that isn't ground, sky, or building. Although, as you can see below, it worked pretty well for early days. 5000 iterations on a dataset containing 26 images, taking only about 40 minutes on the departments server, produced visually quite good results.
 
 ![](/assets/img/studentship/so_5000_example.jpg) 
 
+I will see if I find the time to improve the size of the dataset to make this model better, but for now "good enough".
+
 #### Inpainting
+
+Carrying on from identifying the occluders, they now need to be removed. Inpainting usually requires the original image, and a binary mask of what needs to be removed. So I spent a morning making a new detectron script which instead of outputting a colourfully labelled picture, outputs a binary mask of the occluders. Although I am currently between whether to use a gaussian blur on the mask or not. This will depend on which looks best after inpainting.
+
+Gaussian | No Gaussian
+:---: | :---:
+![](/assets/img/studentship/mask_blur.jpg) | ![](/assets/img/studentship/mask.jpg)  
+
+
 
