@@ -73,9 +73,9 @@ So, to wrap up this big update then.
 
 The general outlook is that we are planning on creating a pipeline for 3D content creation. Namely the creation of a 3D building facade from a single photograph. We will be developing this theoretically in multiple passes. This means creating a rough but full pipeline first, i.e. a rough proof-of-concept. This can then be iterated back over and each stage polished to increase the fidelity of the final artifact. So far on the first pass I have implemented the instance detection of occluders in an image, and I have started implementing the inpainting of the occluders.
 
-Here is a small overview of the image processing:
-Identify Occluders | Mask Occluders | Inpaint Occluders
-:---: | :---: | :---:
-![](/assets/img/studentship/so_5000_example.jpg) | ![](/assets/img/studentship/mask.jpg) | ![](/assets/img/studentship/result.png)
+Here is a small overview of the image processing. 
+
+![](/assets/img/studentship/three_step.png)
+*From identifying occluders, generating the mask, and inpainting.*
 
 I will try make the next update cover a shorter period of development as this one has, likely when I am happy with the inpainting implementation. See ya then.
