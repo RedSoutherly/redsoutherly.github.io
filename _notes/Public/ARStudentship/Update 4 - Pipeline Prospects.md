@@ -75,7 +75,7 @@ The general outlook is that we are planning on creating a pipeline for 3D conten
 
 Here is a small overview of the image processing:
 Identify Occluders | Mask Occluders | Inpaint Occluders
-- | - | -
+:---: | :---: | :---:
 ![](/assets/img/studentship/so_5000_example.jpg) | ![](/assets/img/studentship/mask.jpg) | ![](/assets/img/studentship/result.png)
 
 I will try make the next update cover a shorter period of development as this one has, likely when I am happy with the inpainting implementation. See ya then.
