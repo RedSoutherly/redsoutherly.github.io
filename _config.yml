@@ -30,7 +30,7 @@ url: "https://redsoutherly.github.io/" # the base hostname & protocol for your s
 
 heading: "[blog]" # Change this 
 copyright:  
-  year: 2021
+  year: 2022
   msg: Tommy Hasselman # This is a mandatory attribute for copyright to be displayed ; If deleting this, edit at footer layout.
 
 

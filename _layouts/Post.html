@@ -152,6 +152,16 @@
                 </div>
             {%- endif -%}
 
+            <!-- Portfolio Page -->
+
+            {%- if page.permalink == "/portfolio" -%}
+                <div class="column is-half">
+                        {%- include PortfolioFeedContent.html -%}
+                        {%- include PortfolioFeed.html -%}
+                        {%- include Footer.html -%}             
+                </div>
+            {%- endif -%}
+
         </div>
     </section>     
 </body>
