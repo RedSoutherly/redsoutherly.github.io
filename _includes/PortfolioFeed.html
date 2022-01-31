@@ -29,18 +29,8 @@
 *
 {%- endcomment -%}
 
-{%- if site.preferences.search.enabled -%}
-
-<!-- search bar -->
-<div class="block">
-    <input class="input is-medium" type="text" placeholder="Search posts.." id="search-input" autocomplete="off">
-    <div id="search-results" class="search-results"></div>
-</div>
-<script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
-<script src="/assets/js/Search.js"></script>
-{%- endif -%}
 <!-- feed with filter-->
-{% assign note_items = site.notes | sort: "date" | reverse %}
+{% assign note_items = site.notes | sort: "title" %}
 {% for note_items in note_items %}
 {%- if note_items.notetype == "portfolio" -%}
 <div class="block note-cards">
