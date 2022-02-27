@@ -5,3 +5,5 @@ _notes/.obsidian
 .DS_Store
 
 .obsidian/
+
+.vscode/
