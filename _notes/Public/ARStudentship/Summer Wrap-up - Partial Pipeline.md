@@ -23,7 +23,7 @@ Mask | Inpainted Image
 :---:|:---:
 ![](/assets/img/studentship/IE221695_mask.png) | ![](/assets/img/studentship/IE221695_inpainted.png) 
 
-This pipeline is intended to carry on and isolate the building from the image, analyse its geometry, and create a 3D model of the buildings visible facades. This is then to by used as content for augmented reality applications, as [demonstrated](https://tommyhasselman.com/posts/Update-2-Milestone-Reached) at the start of this project.
+This pipeline is intended to carry on and isolate the building from the image, analyse its geometry, and create a 3D model of the buildings visible facades. This is then to be used as content for augmented reality applications, as [demonstrated](https://tommyhasselman.com/posts/Update-2-Milestone-Reached) at the start of this project.
 
 ## Using the partial pipeline
 
@@ -46,16 +46,16 @@ Project
 ├── deep_tester.py
 ├── deep_masker.py
 ├── scene_occlusion
-│   ├── train
-│   │   └── train.json
-│   ├── test
-│   └── models
+│...├── train
+│...│...└── train.json
+│...├── test
+│...└── models
 ├── inpainting_targets
-│   ├── images
-│   └── output
+│...├── images
+│...└── output
 └── inpainting_zav
-    └── Inpaint
-        └── Program.cs
+....└── Inpaint
+.......└── Program.cs
 ```
 *Irrelevant directories not shown.*
 
@@ -63,9 +63,9 @@ Project
 Before any training sessions have been run the dataset directory will only have "train" and "test" sub-directories. Both contain sets of images for what I hope is clear purposes. The only difference being that the train directory will contain a file named "train.json" (must be named this for scripts to work), this is the json file containing the COCO annotation data for all the images in the train directory. The test images do not need to be annotated currently.
 
 ### Training a model
-In order to run a training session on the dataset we use the deep_trainer.py script. Making sure that the script is adjacent to the dataset in the directory as shown, we can pass some command line arguments to train a model. The first argument is the directory name of the dataset we want to use, the second we use to tell the script how many classes the dataset contains, and the third is the amount of iteration we want to train for.
+In order to run a training session on the dataset we use the deep_trainer.py script. Making sure that the script is adjacent to the dataset in the directory as shown, we can pass some command line arguments to train a model. The first argument is the directory name of the dataset we want to use, the second we use to tell the script how many classes the dataset contains, and the third is the amount of iterations we want to train for.
 
-So to train the scene_occlusion dataset (which has one class) for 5000 iterations; we would run the following command:
+So to train on the scene_occlusion dataset (which has one class) for 5000 iterations; we would run the following command:
 ```sh
 python deep_trainier.py scene_occlusion 1 5000
 ```
@@ -90,7 +90,7 @@ These two scripts will make two different sub-directories within the models dire
 ### Inpainting
 Using the inpainting program is currently a little more manual. In the inpainting_targets directory is a images directory. This is where you need to place the images you want inpainted (likely the originals from the dataset test directory), and with them place the matching png masks from a given model. The masking script should label the masks as the original file name but as a png file instead of a jpg. So for every jpg in the directory there should be the same as a png (This being the image and mask pairs). I.e. a.jpg and a.png are present.
 
-Once the target images are ready move to inpainting_zav/Inpaint/ and run the program using the following command:
+Once the target images are ready, move to inpainting_zav/Inpaint/ and run the program using the following command:
 ```sh
 dotnet run
 ```
